@@ -1,0 +1,84 @@
+.header {
+  grid-area: h;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+
+  p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-top: 32px;
+    color: #000000;
+  }
+
+  img {
+    width: auto;
+    height: 50px;
+    margin-top: 27px;
+    margin-left: 20px;
+  }
+}
+
+.logo {
+  display: flex;
+
+  a {
+    display: flex;
+    text-decoration: none;
+  }
+}
+
+.login {
+  display: flex;
+}
+
+.buttons {
+  border-radius: 10px;
+  margin-top: 17px;
+  margin-left: 15px;
+}
+
+.auth {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 40px;
+
+  .burgerMenu {
+    display: none;
+    font-size: 25px;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {
+  .auth {
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
+    margin: 0;
+  }
+  .burgerMenu {
+    display: inline-block !important;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .auth {
+    padding: 0 20px 0 20px;
+  }
+}

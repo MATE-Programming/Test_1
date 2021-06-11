@@ -1,0 +1,154 @@
+.loginPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 100px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.loginForm {
+  text-align: left;
+  margin-left: 100px;
+
+  input {
+    width: 100%;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover,
+    &:focus {
+      border-color: #2A92FB;
+    }
+
+    &[type="checkbox"] {
+      width: 50px;
+      margin: 0;
+    }
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    line-height: 10px;
+    border: 1px solid black;
+    background: transparent;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+.errorForm {
+  border: 1px solid red;
+  border-radius: 5px;
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+  width: 345px;
+  text-align: center;
+  margin: 15px 0 15px 0;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.errorMessage {
+  border: 1px solid red;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  line-height: 20px;
+  height: 34px;
+  min-width: 85px;
+  margin: 42px 0 0 15px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.errorField {
+  border: 1px solid red !important;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.captcha {
+
+  img {
+    width: 195px;
+  }
+
+  input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .loginForm {
+    margin: 0;
+  }
+  .loginPage {
+    grid-template-columns: 1fr;
+    padding-top: 20px;
+
+    img {
+      display: none;
+    }
+
+    .captcha {
+      img {
+        display: inline;
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .loginForm {
+    button {
+      text-align: center;
+    }
+  }
+  .captcha {
+    text-align: left;
+  }
+  .errorMessage {
+    width: 100%;
+    margin: 15px 0 0 0;
+  }
+  .errorForm {
+    width: 100%;
+  }
+  .field {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 422px) {
+  .captcha {
+    text-align: center;
+  }
+}
